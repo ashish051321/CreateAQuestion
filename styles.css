@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css?family=Pacifico');
+
+@import url('https://fonts.googleapis.com/css?family=Nanum+Gothic');
+
+*{
+  margin:0px;
+  padding:0px;
+  font-family: 'Nanum Gothic', sans-serif;
+}
+
+
+.pagePrgressBar{
+position: fixed;
+top:0px;
+height:20px;
+}
+
+.mainContainer{
+margin-top:30px;
+}
+
+textarea,select{
+  font-family: 'Nanum Gothic', sans-serif;
+}
+
+.mb10{
+margin-bottom: 10px;
+}
+
+.my-ba{
+  background-color: rgb(96, 96, 172);
+}
+
+.comp1 {
+    padding:10px;
+    border: 1px solid lightblue;
+    border-radius: 5px;
+    margin-right:10px;
+    flex-basis: 30%;
+    font-family: 'Nanum Gothic', sans-serif;
+}
+
+
+.comp2 {
+     flex:1;
+     /* take the remaining space */
+}
+
+div.container{
+    margin: 0 auto;
+    margin-top:20px;
+    border-radius: 10px;
+  }
+
+div.title{
+  font-family: Pacifico;
+  font-size: 1.8em;
+  text-align:center;
+  margin-bottom:20px;
+}
+
+div.choices{
+  min-height:80px;
+}
+
+p.addchoices{
+  display:block;
+  width:40px;
+  height:40px;
+  line-height: 40px;
+  text-align:center;
+  font-size: 1.4em;
+  font-weight: bold;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.mybuttons{
+     font-family: 'Nanum Gothic', sans-serif;
+}
+
+.dummyoption{
+  display:none;
+}
+
+
+.effect1{
+	-webkit-box-shadow: 0 10px 6px -6px #777;
+	   -moz-box-shadow: 0 10px 6px -6px #777;
+	        box-shadow: 0 10px 6px -6px #777;
+}
+/* When the screen size goes below 440px, then we are tweaking the page layout a little  */
+
+@media screen and (max-width:440px) {
+  .questionComponents{
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .comp1{
+   margin-right:0px;
+   margin-bottom:2px;
+  }
+
+  .comp2{
+    min-height: 80px;
+  }
+   
+  select.comp2{
+    min-height: 40px;
+    height:40px !important;
+  }
+
+}

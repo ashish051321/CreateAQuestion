@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tachyons/4.9.1/tachyons.css">
+    <link rel="stylesheet" href="styles.css">
+
+    <title>Create a question</title>
+</head>
+
+<body onscroll="scrolled();">
+<div class="pagePrgressBar w-100 bg-light-green effect1" ></div>
+    <div class="mainContainer bg-red pa2" >
+        <div class="container flex w-100 flex-column bg-light-red pa3">
+            <div class="title">Create a Question</div>
+
+            <div class="questionComponents flex justify-center mb10 ">
+                <div class="comp1 description bg-light-blue flex justify-start items-center">
+                    <span>Type</span>
+                </div>
+                <select class="comp2" id="quiztype">
+                    <option value="notvalid" selected="selected">--- Please select an option ---</option>
+                    <option value="mcq-s">MCQ - Single Correct</option>
+                    <option value="mcq-m">MCQ - Multiple Correct</option>
+                    <option value="subjective">Subjective</option>
+                    <option value="yesno">Yes-No</option>
+                    <option value="truefalse">True-False</option>
+                </select>
+            </div>
+
+            <div class="questionComponents flex justify-center mb10 ">
+                <div class="comp1 bg-light-blue flex justify-start items-center">
+                    <span>Question</span>
+                </div>
+                <textarea class="comp2" name="" id="" cols="30" rows="4"></textarea>
+            </div>
+            <div class="questionComponents flex justify-center mb10 ">
+
+                <div class="comp1 bg-light-blue flex justify-start items-center">
+                    <span>Add Options</span>
+                </div>
+
+                <div class="choices comp2 pa2 bg-white flex flex-column justify-center items-center">
+                    <p class="options  dummyoption mb10 pa2 bg-light-green flex justify-between" style="align-self:stretch;">
+                        <span>Hey this is the first one</span>
+                        <span style="cursor:pointer;" class="f7 red" onclick="removeOption(event);">delete</span>
+                    </p>
+                    <p class="addchoices self-start ba b--light-black" onclick="addOption();">+</p>
+                </div>
+            </div>
+            <div class="footer flex justify-end">
+                <button class="pa2 mr1 mybuttons bg-black white" id="cancel">Cancel</button>
+                <button class="pa2 mybuttons bg-black white" id="submit" onclick="submitForm();">Submit</button>
+            </div>
+        </div>
+
+
+<div class="mt4">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ea molestiae expedita asperiores earum totam! Molestiae placeat eos nesciunt saepe voluptatem nam error odio reprehenderit repudiandae voluptate hic eum maiores nobis recusandae laborum quia quo iusto, eius culpa eveniet molestias libero incidunt quidem perspiciatis! Molestias eveniet sit amet nemo hic voluptatum ipsam nam accusantium earum animi obcaecati consectetur odit, quasi fugit sequi corporis consequatur quas? Facilis nesciunt, animi dolor enim explicabo sapiente! Nobis temporibus fugiat esse, accusamus possimus, explicabo at soluta incidunt corrupti molestias nihil consequuntur voluptates provident dicta mollitia quibusdam architecto asperiores vitae magnam excepturi debitis nostrum recusandae. Unde, inventore. Inventore molestiae qui similique dolores ducimus culpa, reprehenderit mollitia, facilis suscipit at ab? Modi minus, alias cum dolor labore dicta inventore. Consequuntur recusandae animi earum eius, quam deleniti suscipit voluptas, quaerat cupiditate minus magni, fugit commodi dolorem. Culpa necessitatibus ipsam autem, similique reprehenderit numquam adipisci dolor delectus eos hic odit asperiores dignissimos. Molestiae error ratione deserunt dolor eum ipsa eius ab nihil, labore quisquam impedit eligendi recusandae distinctio corporis alias optio exercitationem ad voluptates? Sint odio, iure fuga nobis recusandae dignissimos maiores sapiente fugiat similique! Laborum unde ipsam blanditiis esse totam provident odio quibusdam? Eligendi ad quibusdam quod sunt, aliquid sint. Dolor, sed quasi magni ducimus nesciunt qui quia facere, dignissimos eveniet iste neque enim. Fugiat numquam accusamus magni ad, id ullam iste omnis optio temporibus quos corporis nisi, enim voluptas veritatis quis deserunt qui error voluptatibus possimus quo earum! Dolore, architecto. Provident corrupti libero blanditiis ex magnam dicta eligendi animi impedit necessitatibus fuga aliquid earum quasi, officia odit enim eveniet iusto sequi architecto. Inventore, recusandae? Quae, provident nostrum nisi consequatur in id eaque. Assumenda dignissimos laudantium tenetur quam perspiciatis recusandae sed dolorum, molestias consequatur suscipit voluptate ducimus, laborum, incidunt doloribus inventore deleniti necessitatibus earum! Quaerat, nobis laudantium! Aspernatur qui, accusamus porro optio incidunt dignissimos quia eligendi blanditiis tenetur possimus! Natus impedit dolore facere magni optio eum, fugit quis modi exercitationem harum itaque animi quisquam eaque suscipit cum eius quam, veniam nulla pariatur? Obcaecati veritatis a rem voluptatem. Dolorem praesentium possimus reiciendis neque nostrum eos inventore ex deleniti, dicta debitis non soluta asperiores quaerat similique eveniet at qui ea, quia ratione itaque. Vero aliquid explicabo aliquam quisquam nulla sed optio quod esse! Quod maxime neque nisi aliquid dicta. Reiciendis quibusdam repudiandae eveniet sequi saepe, officia vitae suscipit, voluptas totam dolorum ut libero fugit mollitia accusamus veniam quaerat! Fuga deserunt dolorem, odio autem magni eaque aspernatur ex saepe voluptas exercitationem nihil inventore facilis cupiditate ullam quas eos sint nesciunt perferendis earum! Obcaecati quos labore illum! Eius ducimus temporibus esse sunt laboriosam animi delectus sapiente et minus possimus officia cumque quisquam quibusdam iure molestiae voluptatem illo, amet vero illum cum fuga quaerat voluptas. Sapiente ut expedita, distinctio atque voluptatem quidem adipisci error numquam minima non quisquam voluptas? Architecto, amet eligendi obcaecati laboriosam ut sequi quaerat autem non exercitationem sapiente, consectetur animi perferendis? Dignissimos maxime non ipsam minus fugiat officiis distinctio dolores maiores, veniam mollitia optio exercitationem ratione consectetur accusamus ad neque recusandae tempora quas, perferendis consequuntur quos minima? Ullam, veritatis culpa. Dolorum aliquid repudiandae reiciendis aut accusamus, vitae, saepe molestias facere inventore omnis quos dolor asperiores corrupti porro. Voluptatum in cupiditate magnam odio? Consequuntur excepturi a quaerat impedit ex repellat iure maxime tempora, quo autem ad voluptate animi ea cupiditate id delectus expedita est nemo, recusandae magnam eveniet libero. Labore excepturi soluta culpa temporibus officiis dignissimos facere necessitatibus nam repellendus magnam nemo, maiores pariatur, obcaecati architecto alias in asperiores ipsa? Corrupti quam perspiciatis numquam perferendis id fugit tempore optio quia exercitationem. Aspernatur architecto cum inventore at et culpa modi delectus neque obcaecati repellendus deleniti iure, rem dignissimos nihil omnis officia quos reiciendis? At, nulla, laboriosam id ad expedita enim omnis quas sint sit, asperiores ut aliquam eligendi quisquam nemo. Excepturi commodi voluptates corporis aut vel perspiciatis odit, ea, aliquam sapiente minus sequi magni sint impedit ad error voluptatum vitae ipsam amet est quia! Autem eveniet consectetur cumque, aut, neque quo maxime qui alias nisi dignissimos similique nihil quam necessitatibus, quae a doloremque quisquam! Dolore aperiam nulla eum iure explicabo laborum rem fugiat minus nobis consequuntur aspernatur architecto labore quam, perferendis rerum temporibus blanditiis necessitatibus doloribus mollitia quae. Quasi quam fuga sed expedita suscipit adipisci repudiandae laudantium explicabo sint neque tenetur similique aliquid sunt velit cum, mollitia molestias esse, nisi architecto ut libero! Dolore dicta error maxime sapiente ipsam, quia soluta id atque, quisquam, hic quo eaque animi numquam repellat ab ducimus placeat sit libero cupiditate omnis. Dolorum eum impedit placeat necessitatibus porro minus illum laborum voluptas mollitia enim accusantium facere ab voluptate officia explicabo iste sapiente, quam dicta aut molestiae totam eligendi tempore. Obcaecati officiis veritatis earum deserunt, ipsam ratione repellendus nobis accusantium, itaque, suscipit ullam omnis iste quasi dolorem! Sapiente at, recusandae quas asperiores delectus, obcaecati voluptatibus, eligendi quod ex non nam aperiam? Iure rerum amet tempora placeat porro? Quo expedita error illum quos cupiditate quas odio corporis, culpa itaque animi voluptate consequatur, exercitationem, debitis tenetur eligendi? Velit commodi porro aut odio magni id, reprehenderit quisquam laboriosam accusamus quaerat modi, corporis tenetur quis deserunt! Similique voluptatibus nihil odit ducimus error temporibus ullam nostrum. Tenetur, voluptatum? Beatae neque fuga praesentium aliquam id vitae voluptatum doloribus atque, non repellendus autem sit eos unde perferendis maxime voluptate et rem amet voluptates, veritatis hic, omnis deserunt aut! Eos veniam, illo reiciendis ipsum dicta corporis odit magni, aspernatur cupiditate temporibus facilis laboriosam beatae commodi nostrum nobis voluptatum. Quidem amet voluptatibus rem, autem doloremque ad facere similique nisi assumenda vel facilis mollitia velit veritatis alias corrupti, ex architecto veniam in odit delectus. Veritatis corrupti nam similique vitae nobis rerum temporibus quo aliquid, exercitationem repellat eius itaque provident eum aspernatur odio illo quam porro id! Sunt corporis est architecto temporibus exercitationem dignissimos enim assumenda, quas beatae rem odio facilis optio quisquam ipsa atque veniam aliquam, recusandae nobis maiores impedit porro consequuntur eligendi reprehenderit! Dolorum vero, culpa autem soluta tenetur et, eum, labore quasi sequi dolore voluptatum? Veritatis expedita nisi ex vel nihil repellendus amet necessitatibus at eligendi sapiente.</div> 
+    </div>
+
+    <!-- Including Firebase in the project -->
+    <script src="https://www.gstatic.com/firebasejs/4.11.0/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyCDREoTrJaMBh41_BT7UAmaZU7CAFZuWQo",
+            authDomain: "quizapp-4e2e9.firebaseapp.com",
+            databaseURL: "https://quizapp-4e2e9.firebaseio.com",
+            projectId: "quizapp-4e2e9",
+            storageBucket: "quizapp-4e2e9.appspot.com",
+            messagingSenderId: "1014742859543"
+        };
+        firebase.initializeApp(config);
+    </script>
+
+    <script src="scripts.js"></script>
+</body>
+
+</html>
